@@ -1,0 +1,151 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #f2f2f2 !important;
+}
+
+.card {
+    width: 300px !important;
+}
+
+.navigation {
+    position: fixed;
+    width: 60px;
+    height: 100%;
+    background: #fff;
+    transition: 0.5s;
+    overflow: hidden;
+    z-index: 10;
+}
+
+.navigation:hover, .active {
+    width: 200px;
+}
+
+.navigation ul {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+
+.navigation ul li {
+    position: relative;
+    width: 100%;
+    list-style: none;
+}
+
+.navigation ul li:hover {
+    background: #f2f2f2;
+}
+
+.navigation ul li a {
+    position: relative;
+    display: block;
+    display: flex;
+    width: 100%;
+    text-decoration: none;
+    color: black;
+}
+
+.navigation ul li a:hover {
+    color: #feb640;
+}
+
+.navigation ul li a .icon {
+    position: relative;
+    display: block;
+    min-width: 60px;
+    height: 60px;
+    line-height: 60px;
+    text-align: center;
+}
+
+.navigation ul li a .icon .fas {
+    font-size: 24px;
+}
+
+.navigation ul li a .title {
+    position: relative;
+    display: block;
+    padding: 0 10px;
+    height: 60px;
+    line-height: 60px;
+    text-align: start;
+    white-space: nowrap;
+}
+
+.fab-container {
+    background: #feb640;
+    position: fixed;
+    bottom: 50px;
+    right: 5%;
+    z-index: 999;
+    cursor: pointer;
+}
+
+.content {
+    position: relative;
+    width: calc(100% - 100px);
+    top: 100px;
+    left: 80px;
+}
+
+.customBtn {
+    background: #feb640 !important;
+}
+
+.customBtn:hover {
+    background: orange !important;
+}
+
+.toggle {
+    position: absolute;
+    top: 20px;
+    right: 40px;
+    width: 50px;
+    height: 50px;
+    border-radius: 10px;
+    background: #feb640;
+    cursor: pointer;
+}
+
+.toggle.active {
+    background: orange; 
+}
+
+.toggle:before {
+    content: '\f0c9';
+    font-family: fontAwesome;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    line-height: 50px;
+    text-align: center;
+    font-size: 24px;
+    color: #fff;
+}
+
+.toggle.active:before {
+    content: '\f00d';
+}
+
+@media (max-width: 767px) {
+    .navigation{
+        left: -60px;
+    }
+
+    .navigation.active {
+        left: 0;
+        width: 75%;
+    }
+
+    .content {
+        left: 0;
+        width: 100%;
+    }
+}
